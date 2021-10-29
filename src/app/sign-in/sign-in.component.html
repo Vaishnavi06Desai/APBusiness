@@ -1,7 +1,26 @@
-<p>sign-in works!</p>
-<div class="Box">
+<section>
+    <div class="box">
+        <div class="form">
     <h2>Login</h2>
-</div>
-<form>
-    <div class="inputbx"></div>
-</form>
+        <form  [formGroup]="signin">
+           <div class="inputbox">
+           <input type="text" placeholder="email" formControlName="email">
+           <img src="../assets/media/user.png" >
+           </div>
+           <div class="inputbox">
+           <input type="password"  placeholder="Password" formControlName="password">
+           <img src="../assets/media/lock.png">
+           </div>
+             <label for="remember">
+             <input type="checkbox">Remember Me</label>
+                 <div class="inputbox" (click)="login()"> 
+                     <input type="submit" value="Login">
+                 </div>
+        </form>
+        <div class="for">
+         <p>Forget <a href="#">Password</a></p>
+         <p>SignUp <a href="#">Google</a></p>
+        </div>
+        </div>
+    </div>
+</section>
